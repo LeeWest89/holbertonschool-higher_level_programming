@@ -7,7 +7,7 @@ ld = abs(number) % 10
 if number < 0:
     sign = '-'
 
-if number > 0:   
+if number >= 0:   
     if ld > 5:
         print(f'Last digit of {number} is {ld} and is greater than 5')
 
@@ -17,6 +17,6 @@ if number > 0:
     else:
         print(f'Last digit of {number} is {ld} and is less than 6 and not 0')
 
-else:
+elif number < 0:
     print(f'Last digit of {number} is {sign}{ld} and is less than 6 and not 0')
 
