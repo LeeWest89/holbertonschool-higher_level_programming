@@ -6,4 +6,4 @@ ld = abs(number) % 10
 
 print("{}".format(ld), end="")
 
-return (ld)
+return ld
