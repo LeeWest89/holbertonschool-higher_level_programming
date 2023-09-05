@@ -2,8 +2,8 @@
 
 def print_last_digit(number):
 
-ld = abs(number) % 10
+last = abs(number) % 10
 
-print("{}".format(ld), end="")
+print("{}".format(last), end="")
 
-return ld
+return last
