@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 
-if __name__ == "__main__":
-    import sys
-    args = len(sys.argv) - 1
+import hidden_4
 
-    if args == 0:
-        print("0 arguments.".format(args))
-    elif args == 1:
-        print("1 argument:".format(args))
-    else:
-        print("{} arguments:".format(args))
-    for i in range(args):
-        print("{}: {}".format(i + 1, sys.argv[i + 1]))
+if __name__ == "__main__":
+    names = dir(hidden_4)
+    sort_name = sorted(names)
+    for name in sort_name:
+        if name[:2] != "__":
+            print(names)
