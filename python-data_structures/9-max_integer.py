@@ -4,6 +4,6 @@ def max_integer(my_list=[]):
     if my_list == "":
         return (None)
     for number in my_list:
-        if (number > max):
+        if number > max:
             max = number
     return (max)
