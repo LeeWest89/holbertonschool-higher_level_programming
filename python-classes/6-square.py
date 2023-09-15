@@ -40,6 +40,12 @@ class Square:
         if type(value) is not int:
             """Checks if value is tuple of two postive int"""
             raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(value) != 2:
+            """Check if position has two elements"""
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif type(value) is not tuple:
+            """Checks f value is a tuple"""
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__postion = value
 
     def my_print(self):
