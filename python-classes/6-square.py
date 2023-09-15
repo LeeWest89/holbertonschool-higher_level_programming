@@ -36,7 +36,7 @@ class Square:
         if any(i < 0 for i in value):
             """Checks if value is tuple of two postive int"""
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif not isinstance(value, tuple):
+        elif type(value) is not tuple:
             """Checks if value is tuple of two postive int"""
             raise TypeError("position must be a tuple of 2 positive integers")
         elif len(value) != 2:
