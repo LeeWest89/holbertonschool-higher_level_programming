@@ -52,6 +52,7 @@ class Square:
         """Prints the stdout of the square using # and spaces"""
         if self.__size == 0:
             print("")
+            return ()
         for k in range(self.__position[1]):
             print()
         for i in range(self.__size):
