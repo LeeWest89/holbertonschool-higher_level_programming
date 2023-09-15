@@ -6,8 +6,8 @@ class Square:
     """Square with a size."""
     def __init__(self, size=0, position=(0, 0)):
         """Intializes the Square."""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -45,8 +45,7 @@ class Square:
         elif value[0] < 0 or value[1] < 0:
             """Checks if value isless than zero"""
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        self.__position = value
 
     def area(self):
         """Returns the area of the square"""
