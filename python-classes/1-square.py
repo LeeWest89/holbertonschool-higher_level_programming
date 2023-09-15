@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # 1-square.py
+# Lee West <6683@holbertonstudents.com>
 """Defines the class Square"""
 
 
