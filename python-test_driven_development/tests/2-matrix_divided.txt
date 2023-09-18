@@ -1,0 +1,37 @@
+====Function====
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+----Int-Number Test----
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> print(matrix_divided(matrix, -3))
+[[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+----Float-Number Test----
+>>> print(matrix_divided(matrix, 3.5))
+[[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
+
+----Wrong Test----
+>>> matrix_divided(matrix, float('NaN'))
+[[nan, nan, nan], [nan, nan, nan]]
+
+>>> matrix_divided(matrix, float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix_divided([[1, 2, 3], [4]], 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided([[1, 2, 3], [4, "H", 6]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "H")
+Traceback (most recent call last):
+TypeError: div must be a number
