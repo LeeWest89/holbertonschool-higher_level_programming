@@ -1,0 +1,36 @@
+====Function====
+>>> add_integer = __import__('0-add_integer').add_integer
+
+----Interger Test----
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+----Float Test----
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer(75.2, 72.1)
+147
+
+----Non Interger Test----
+>>> add_integer(3, "Why")
+Traceback (most recent call last):
+TypeError: b must be an interger
+
+>>> add_integer(2, "What")
+Traceback (most recent call last):
+TypeError: b must be an interger
+
+>>> add_integer("why", 4)
+Traceback (most recent call last):
+TypeError: a must be an interger
+
+>>> add_integer("Who", 7)
+Traceback (most recent call last):
+TypeError: a must be an interger
