@@ -18,19 +18,11 @@
 >>> add_integer(75.2, 72.1)
 147
 
-----Non Interger Test----
->>> add_integer(3, "Why")
+----Non-Number Test----
+>>> add_integer(3, "Test")
 Traceback (most recent call last):
-TypeError: b must be an interger
+TypeError: b must be an integer
 
->>> add_integer(2, "What")
+>>> add_integer("Test", 7)
 Traceback (most recent call last):
-TypeError: b must be an interger
-
->>> add_integer("why", 4)
-Traceback (most recent call last):
-TypeError: a must be an interger
-
->>> add_integer("Who", 7)
-Traceback (most recent call last):
-TypeError: a must be an interger
+TypeError: a must be an integer
