@@ -47,18 +47,13 @@ class Rectangle:
 
     def __str__(self):
         rec = ""
-        ps = ""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        if type(self.print_symbol) is list:
-            ps = ''.join(map(str, self.print_symbol))
-        else:
-            ps = str(self.print_symbol)
         for i in range(self.__height):
-            rec += ps * self.__width
-            if i < self.__height - 1:
-                rec += "\n"
-        return (rec)
+            for j in range(self.__width):
+                rec += str(self.print_symbol)
+            rec += "\n"
+            return (rec)
 
     def __repr__(self):
         return ("Rectangle({}, {})".format(self.__width, self.__height))
