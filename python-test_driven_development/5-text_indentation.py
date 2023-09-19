@@ -15,9 +15,9 @@ def text_indentation(text):
         c += i
         if i in symbol:
             line.append(c.strip())
-            line.append("")
+            line.append("\n\n")
             c = ""
     if c:
         line.append(c.strip())
     for a in line:
-        print(a)
+        print(a, end="")
