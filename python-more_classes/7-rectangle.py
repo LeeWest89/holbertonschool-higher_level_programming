@@ -47,6 +47,7 @@ class Rectangle:
 
     def __str__(self):
         rec = ""
+        ps = ""
         if self.__width == 0 or self.__height == 0:
             return ("")
         if type(self.print_symbol) is list:
