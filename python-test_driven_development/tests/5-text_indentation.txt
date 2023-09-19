@@ -7,15 +7,15 @@
 Hi
 
 >>> text_indentation("Hi?")
-Hi
+Hi?
 <BLANKLINE>
 
 >>> text_indentation("Hi.")
-Hi
+Hi.
 <BLANKLINE>
 
 >>> text_indentation("Hi:")
-Hi
+Hi:
 <BLANKLINE>
 
 >>> text_indentation(1)
