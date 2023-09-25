@@ -34,3 +34,39 @@
 
 >>> my_list.print_sorted()
 [-5, -4, -2, 1, 3]
+
+----Word List----
+>>> my_list = MyList()
+>>> my_list.append("Tom")
+>>> my_list.append("Dick")
+>>> my_list.append("Harry")
+
+>>> my_list
+['Tom', 'Dick', 'Harry']
+
+>>> my_list.print_sorted()
+['Dick', 'Harry', 'Tom']
+
+----One Number----
+>>> my_list = MyList()
+>>> my_list.append(1)
+
+>>> my_list
+[1]
+
+>>> my_list.print_sorted()
+[1]
+
+----Single Number----
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+
+>>> my_list
+[1, 1, 1, 1, 1]
+
+>>> my_list.print_sorted()
+[1, 1, 1, 1, 1]
