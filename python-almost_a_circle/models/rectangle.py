@@ -77,5 +77,12 @@ class Rectangle(Base):
             print(" " * self.x + "#" * self.width)
 
     def __str__(self):
+        """Gives a display of attributes in Rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """Will change attributes to new values"""
+        att = ["id", "width", "height", "x", "y"]
+        for i, arg in enumerate(args):
+            setattr(self, att[i], arg)
