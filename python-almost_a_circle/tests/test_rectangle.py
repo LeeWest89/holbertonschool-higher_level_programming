@@ -20,6 +20,10 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(10)
 
+    def test_too_many_argument(self):
+        with self.assertRaises(TypeError):
+            Rectangle(10, 5, 0, 0, 7, 8, 9, 10)
+
 # Width Test
 
     def test_width_none(self):
