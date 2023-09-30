@@ -5,7 +5,7 @@ from models.rectangle import Rectangle
 if __name__ == "__main__":
 
     try:
-        Rectangle()
+        Rectangle(10, True)
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
 
@@ -22,6 +22,6 @@ if __name__ == "__main__":
         print("[{}] {}".format(e.__class__.__name__, e))
 
     try:
-        Rectangle(1, 2, 3, 1, 3, 4)
+        Rectangle(10, 2, 3, -1)
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
