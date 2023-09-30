@@ -70,9 +70,11 @@ class Rectangle(Base):
         return (self.width * self.height)
 
     def display(self):
-        """Prints the stdout of the rectangle using #"""
+        """Prints the stdout of the rectangle using # and spaces"""
+        for j in range(self.y):
+            print()
         for i in range(self.height):
-            print("#" * self.width)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
