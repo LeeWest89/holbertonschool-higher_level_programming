@@ -60,8 +60,7 @@ class Base:
         file = cls.__name__ + ".json"
         try:
             with open(file, "r") as f:
-                info = f.read()
-                list_d = json.loads(info)
+                list_d = Base. from_json_string(f.read())
                 return ([cls.create(**d) for d in list_d])
         except FileNotFoundError:
             return ([])
