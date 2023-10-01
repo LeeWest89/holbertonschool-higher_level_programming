@@ -9,7 +9,7 @@ class Rectangle(Base):
     """Rectangle inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Class constructor"""
+        """Class creater"""
 
         super().__init__(id)
         self.width = width
@@ -90,5 +90,3 @@ class Rectangle(Base):
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
-    def to_dictionary(self):
