@@ -12,6 +12,9 @@ class TestRectangle(unittest.TestCase):
 
 # General Test
 
+    def test_rectangle_is_base(self):
+        self.assertIsInstance(Rectangle(2, 4), Base)
+
     def test_no_argument(self):
         with self.assertRaises(TypeError):
             Rectangle()
