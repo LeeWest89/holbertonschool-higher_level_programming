@@ -106,3 +106,10 @@ class TestBase(unittest.TestCase):
         ob2 = Base()
         self.assertEqual(ob1.id, True)
         self.assertEqual(ob2.id, 1)
+
+    def test_tuple_id(self):
+        Base._Base__nb_objects = 0
+        ob1 = Base((1, 3))
+        ob2 = Base()
+        self.assertEqual(ob1.id, (1, 3))
+        self.assertEqual(ob2.id, 1)
