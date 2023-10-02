@@ -4,7 +4,7 @@ from models.rectangle import Rectangle
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(4, True)
+    r1 = Rectangle(4)
     r1.display()
 
     print("---")

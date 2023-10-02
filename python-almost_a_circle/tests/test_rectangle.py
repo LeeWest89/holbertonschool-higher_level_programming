@@ -247,3 +247,36 @@ class TestRectangle(unittest.TestCase):
     def test_y_negative(self):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Rectangle(1, 5, 0, -1)
+
+class TestRectangle_area(unittest.TestCase):
+    """Unittest for def area(self)"""
+# Area
+
+    def test_area_none(self):
+        rec = Rectangle
+        with self.assertRaises(TypeError):
+            rec.area()
+
+    def test_area_one_arg(self):
+        rec = Rectangle(2, 8, 1, 0, 1)
+        with self.assertRaises(TypeError):
+            rec.area(1)
+
+    def test_area_many_args(self):
+        rec = Rectangle(2, 8, 1, 0, 1)
+        with self.assertRaises(TypeError):
+            rec.area(12)
+
+    def test_area_small(self):
+        rec = Rectangle(2, 4, 0, 0, 0)
+        self.assertEqual(8, rec.area())
+
+    def test_area_big(self):
+        rec = Rectangle(20, 30, 0, 0, 0)
+        self.assertEqual(600, rec.area())
+
+    def test_area_change(self):
+        rec = Rectangle(20, 30, 0, 0, 0)
+        rec.width = 12
+        rec.height = 10
+        self.assertEqual(120, rec.area())
