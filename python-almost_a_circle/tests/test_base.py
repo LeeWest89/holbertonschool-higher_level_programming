@@ -113,3 +113,18 @@ class TestBase(unittest.TestCase):
         ob2 = Base()
         self.assertEqual(ob1.id, (1, 3))
         self.assertEqual(ob2.id, 1)
+
+class TestBase_to_json_string(unittest.TestCase):
+    pass
+
+class TestBase_save_to_file(unittest.TestCase):
+    pass
+
+class TestBase_from_json_string(unittest.TestCase):
+    pass
+
+class TestBase_create(unittest.TestCase):
+    pass
+
+class TestBase_load_json_string(unittest.TestCase):
+    pass

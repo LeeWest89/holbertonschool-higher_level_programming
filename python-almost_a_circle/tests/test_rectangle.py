@@ -283,3 +283,15 @@ class TestRectangle_area(unittest.TestCase):
         rec.width = 12
         rec.height = 10
         self.assertEqual(120, rec.area())
+
+class TestRectangle_display(unittest.TestCase):
+    pass
+
+class TestRectangle_str(unittest.TestCase):
+    pass
+
+class TestRectangle_update(unittest.TestCase):
+    pass
+
+class TestRectangle_to_dictinary(unittest.TestCase):
+    pass
