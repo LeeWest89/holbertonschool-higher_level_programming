@@ -133,10 +133,16 @@ class TestBase_to_json_string(unittest.TestCase):
                          '[]')
 
 class TestBase_save_to_file(unittest.TestCase):
-    pass
+    def test_save_to_file_None(self):
+        sample = []
+        self.assertEqual(Base.save_to_file(sample),
+                         None)
 
 class TestBase_from_json_string(unittest.TestCase):
-    pass
+    def test_from_json_string_None(self):
+        sample = None
+        self.assertEqual(Base.from_json_string(sample),
+                         [])
 
 class TestBase_create(unittest.TestCase):
     pass
