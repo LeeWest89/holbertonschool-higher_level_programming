@@ -4,6 +4,7 @@
 
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
@@ -115,7 +116,21 @@ class TestBase(unittest.TestCase):
         self.assertEqual(ob2.id, 1)
 
 class TestBase_to_json_string(unittest.TestCase):
-    pass
+    def test_to_json_string(self):
+        sample = [{'a': 1, 'b': 2, 'c': 3},
+        ]
+        self.assertEqual(Base.to_json_string(sample), 
+                         '[{"a": 1, "b": 2, "c": 3}]')
+
+    def test_to_json_string_empty(self):
+        sample = []
+        self.assertEqual(Base.to_json_string(sample),
+                         '[]')
+
+    def test_to_json_string_None(self):
+        sample = None
+        self.assertEqual(Base.to_json_string(sample),
+                         '[]')
 
 class TestBase_save_to_file(unittest.TestCase):
     pass
