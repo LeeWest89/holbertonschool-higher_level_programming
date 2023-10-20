@@ -1,1 +1,2 @@
-#!/usr/bin/python3
+-- shows all tables in database
+SHOW TABLES
