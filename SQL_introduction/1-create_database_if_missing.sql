@@ -1,1 +1,2 @@
-#!/usr/bin/python3
+-- Creates database for mysql
+CREATE DATABASE hbtn_0c_0
