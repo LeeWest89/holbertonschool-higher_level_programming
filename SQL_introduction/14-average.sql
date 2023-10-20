@@ -1,1 +1,1 @@
-#!/usr/bin/python3
+SELECT AVG(score) AS average FROM second_table;
