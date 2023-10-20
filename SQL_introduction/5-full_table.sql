@@ -1,1 +1,2 @@
-#!/usr/bin/python3
+-- prints the full description of the table
+SHOW CREATE TABLE first_table;
