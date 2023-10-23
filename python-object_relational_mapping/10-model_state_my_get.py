@@ -16,6 +16,9 @@ if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Not Found")
         sys.exit(1)
+    if not sys.argv[4][0].isupper():
+        print("Not Found")
+        sys.exit(1)
     Session = sessionmaker(bind=eng)
     session = Session()
     state = session.query(State).filter(State.name == sys.argv[4]).first()
