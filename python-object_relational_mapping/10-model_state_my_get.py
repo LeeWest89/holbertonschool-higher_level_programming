@@ -13,12 +13,9 @@ if __name__ == "__main__":
                         .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=eng)
     session = Session()
-    identify = False
-    for state in session.query(State):
-        if state.name == sys.argv[4]:
-            print("{}".format(state.id))
-            identify = True
-            break
-    if identify is False:
+    state = session.query(State).filter(State.name == sys.argv[4])
+    try:
+        print(state[0].id)
+    except IndexError:
         print("Not Found")
-    session.close() 
+    session.close()
