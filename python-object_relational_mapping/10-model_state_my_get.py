@@ -13,9 +13,10 @@ if __name__ == "__main__":
                         .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
+    s = sys.argv[4]
     Session = sessionmaker(bind=eng)
     session = Session()
-    state = session.query(State).filter(State.name == sys.argv[4]).first()
+    state = session.query(State).filter(State.name == s).first()
     if state is None:
         print("Not Found")
     else:
