@@ -13,17 +13,11 @@ if __name__ == "__main__":
                         .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                         pool_pre_ping=True)
     Base.metadata.create_all(eng)
-    if len(sys.argv) != 5:
-        print("Not Found")
-        sys.exit(1)
-    if not sys.argv[4][0].isupper():
-        print("Not Found")
-        sys.exit(1)
     Session = sessionmaker(bind=eng)
     session = Session()
     state = session.query(State).filter(State.name == sys.argv[4]).first()
-    if state:
+    if state is not None:
         print("{}".format(state.id))
     else:
-        print("Not Found")
+        print("Not found")
     session.close()
