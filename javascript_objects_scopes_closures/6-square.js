@@ -6,7 +6,7 @@ class SquareC extends Square {
     super(size, size);
   }
 
-  charPrint(c) {
+  charPrint (c) {
     if (c === undefined) {
       c = 'X';
     }
