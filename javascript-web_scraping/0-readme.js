@@ -7,6 +7,6 @@ fs.readFile(fp, 'utf-8', (e, data) => {
   if (e) {
     console.error(e);
   } else {
-    console.log(data || "");
+    console.log(data || '');
   }
 });
