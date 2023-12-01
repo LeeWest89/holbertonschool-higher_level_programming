@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// prints the title of a Star Wars movie where the episode number matches a given integer.
+// prints the number of movies where the character “Wedge Antilles” is present.
 const req = require('request');
 const url = process.argv[2];
 
