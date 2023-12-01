@@ -8,7 +8,7 @@ req(url, (e, response, data) => {
     console.error(e);
   } else {
     const movies = JSON.parse(data).results;
-    const characterCount = movies.filter(movie => movie.characters.includes('https://swapi-api.hbtn.io/api/people/18/'));
+    const characterCount = movies.filter(movie => movie.characters.includes('http://swapi.co/api/people/18/'));
     console.log(characterCount.length);
   }
 });
