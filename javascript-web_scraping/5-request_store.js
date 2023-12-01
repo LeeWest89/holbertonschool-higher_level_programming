@@ -12,7 +12,7 @@ req(url, (e, response, data) => {
     fs.writeFile(fp, data, 'utf-8', (e) => {
       if (e) {
         console.error(e);
-	  }
+      }
     });
   }
 });
