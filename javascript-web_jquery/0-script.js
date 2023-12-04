@@ -1,5 +1,3 @@
 #!/usr/bin/node
-document.addEventListener('DOMContentLoaded', function () {
-  const colorChange = document.querySelector('header');
-  colorChange.style.color = '#FF0000';
-});
+document.querySelector('header').style.color = '#FF0000'
+
