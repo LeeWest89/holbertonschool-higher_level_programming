@@ -1,1 +1,1 @@
-#include
+#!/usr/bin/node
